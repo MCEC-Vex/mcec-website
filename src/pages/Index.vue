@@ -6,142 +6,26 @@
             </div>
         </div>
 
-        <div class="container-inner mx-auto">
+        <div class="container-inner mx-auto mb-16">
             <p class="text-lg sm:text-xl mb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus est, feugiat ac urna ac, lacinia faucibus ipsum. Nullam ante nulla, ornare in sem nec, consequat aliquam massa. Etiam purus turpis, ultrices eget tincidunt sed, venenatis nec lacus. Duis nec mattis sem. Ut vulputate ultrices efficitur. Maecenas elementum eros diam, et tempor enim consectetur et. In condimentum vehicula sem a mattis. Integer vel est ac velit auctor accumsan id et arcu. Fusce malesuada tempus sem a fringilla. Nunc finibus gravida ipsum, vitae finibus dolor pellentesque in.
             </p>
         </div>
 
         <div class="overflow-x-hidden">
-            <div class="projects container-inner mx-auto text-xl border-t border-gray-500 border-b py-16 mb-16 relative">
-                <h2 class="font-bold mb-6" id="projects">Here are some projects I've worked on:</h2>
-
-                <ul class="text-lg sm:text-xl space-y-6">
-                    <li class="checkmark">
-                        <div>Project One</div>
-                        <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                            ab nam animi iure nemo exercitationem a, eius non culpa itaque!
-                        </div>
-                    </li>
-                    <li class="checkmark">
-                        <div>Project Two</div>
-                        <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                            ab nam animi iure nemo exercitationem a, eius non culpa itaque!
-                        </div>
-                    </li>
-                    <li class="checkmark">
-                        <div>Project Three</div>
-                        <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                            ab nam animi iure nemo exercitationem a, eius non culpa itaque!
-                        </div>
-                    </li>
-                    <li class="checkmark">
-                        <div>Project Four</div>
-                        <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                            ab nam animi iure nemo exercitationem a, eius non culpa itaque!
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
+            <robotics/>
         </div>
 
         <div class="overflow-x-hidden border-gray-200 border-b">
-            <div class="get-to-know-me container-inner mx-auto text-xl pb-16 relative">
-                <h2 class="font-bold mb-6" id="about">Get to know me:</h2>
-
-                <div class="flex flex-col sm:flex-row justify-between items-center mb-16">
-                    <div>
-                        <g-image src="../../static/avatar.jpg" alt="avatar"
-                                 class="w-32 h-32 rounded-full mb-8 lg:mb-0"/>
-                    </div>
-                    <div class="flex-1 text-lg sm:text-xl ml-6">Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Eum quae architecto minus molestias iusto ducimus fuga quo quia libero dignissimos, fugiat
-                        modi assumenda debitis laboriosam.
-                    </div>
-                </div>
-
-                <div class="responsive-container">
-                    <iframe class="responsive-iframe w-full h-full top-0 left-0 border-0"
-                            src="https://www.youtube.com/embed/uHo6o1TNQeE" style="border:0;"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-            </div> <!-- end get-to-know me -->
+            <leadership/>
         </div>
 
         <div class="overflow-x-hidden">
-            <div class="contact-me bg-background-secondary pt-16">
-                <div class="container-inner mx-auto text-xl pb-4 relative">
-                    <h2 class="font-bold mb-6" id="contact">Contact Us:</h2>
-
-                    <div class="text-lg sm:text-lg mb-16">
-                        <form action="#" class="mb-12">
-                            <div class="flex flex-wrap mb-6 -mx-4">
-                                <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
-                                    <label class="block mb-2 text-copy-primary" for="name">
-                                        Name
-                                    </label>
-
-                                    <input type="text" name="name" id="name" placeholder="Jon Snow"
-                                           class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4"
-                                           required>
-                                </div>
-
-                                <div class="w-full px-4 md:w-1/2">
-                                    <label class="block text-copy-primary mb-2" for="email">
-                                        Email Address
-                                    </label>
-
-                                    <input type="email" name="email" id="email" placeholder="email@example.com"
-                                           class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4"
-                                           required>
-                                </div>
-                            </div>
-
-                            <div class="w-full mb-12">
-                                <label class="block text-copy-primary mb-2" for="message">
-                                    Message
-                                </label>
-
-                                <textarea id="message" rows="5" name="message"
-                                          class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none appearance-none focus:border-green-700 mb-2 px-4 py-4"
-                                          placeholder="Enter your message here." required></textarea>
-                            </div>
-
-                            <div class="flex justify-end w-full">
-                                <input type="submit" value="Submit"
-                                       class="block bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold tracking-wide uppercase shadow rounded cursor-pointer px-6 py-3">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div> <!-- end contact-me -->
+            <contact-us/>
         </div>
 
         <div class="newsletter bg-background-tertiary">
-            <div class="container-inner mx-auto py-16 pb-8 text-center textl-xl">
-                <h2 class="text-2xl font-bold mb-8">Join our Newsletter</h2>
-
-                <div class="w-4/5 mx-auto mb-8">
-                    <p class="mb-8 text-lg sm:text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Corporis, voluptatum. Quam, deleniti nulla.</p>
-
-                    <form action="#">
-                        <div class="flex flex-col sm:flex-row">
-                            <input type="email" name="email" placeholder="Your email address"
-                                   class="flex-1 bg-background-form rounded sm:rounded-r-none px-4 py-4 leading-normal border border-border-color-primary sm:border-r-0 shadow outline-none focus:border-green-700 z-10"
-                                   required>
-                            <button data-element="submit"
-                                    class="flex-2 w-40 uppercase bg-blue-700 text-white rounded sm:rounded-l-none
-                                    text-lg py-3 px-8 tracking-wide shadow focus:outline-none hover:bg-blue-800
-                                    focus:bg-blue-800 z-10 w-full sm:w-auto mt-4 sm:mt-0">
-                                <span>Subscribe</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <newsletter-subscribe/>
 
             <div class="container-inner mx-auto -mt-32 pb-4 overflow-x-hidden">
                 <svg width="725" height="166" xmlns="http://www.w3.org/2000/svg">
@@ -213,7 +97,12 @@
 </template>
 
 <script>
+    import ContactUs from '../components/ContactUs';
+    import NewsletterSubscribe from '../components/NewsletterSubscribe';
+    import Leadership from '../components/Leadership';
+    import Robotics from '../components/Robotics';
     export default {
+        components: {Robotics, Leadership, NewsletterSubscribe, ContactUs},
         metaInfo: {
             title: 'Home'
         }

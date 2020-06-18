@@ -30,14 +30,14 @@
                         <theme-switcher :theme="theme" @themeChanged="updateTheme"/>
                     </li>
                     <li>
-                        <a v-if="$route.path === '/'" href="/#projects" v-scroll-to="'#projects'"
+                        <a v-if="$route.path === '/'" href="/#robotics" v-scroll-to="'#robotics'"
                            class="text-copy-primary hover:text-gray-600">Robotics</a>
-                        <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600">Robotics</g-link>
+                        <g-link v-else to="/#robotics" class="text-copy-primary hover:text-gray-600">Robotics</g-link>
                     </li>
                     <li>
-                        <a v-if="$route.path === '/'" href="/#about" v-scroll-to="'#about'"
+                        <a v-if="$route.path === '/'" href="/#leadership" v-scroll-to="'#leadership'"
                            class="text-copy-primary hover:text-gray-600">Leadership</a>
-                        <g-link v-else to="/#about" class="text-copy-primary hover:text-gray-600">Leadership</g-link>
+                        <g-link v-else to="/#leadership" class="text-copy-primary hover:text-gray-600">Leadership</g-link>
                     </li>
                     <li>
                         <a v-if="$route.path === '/'" href="/#contact" v-scroll-to="'#contact'"
@@ -62,7 +62,7 @@
                 </div>
                 <ul class="flex items-center space-x-8">
                     <li>
-                        <a href="mailto:me@example.com" class="text-white hover:text-gray-400">
+                        <a href="mailto:moorparkcollegeengineeringclub@gmail.com" class="text-white hover:text-gray-400">
                             <svg width="25" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.5 0h20A2.5 2.5 0 0 1 25 2.5v15a2.5 2.5 0 0 1-2.5 2.5h-20A2.5 2.5 0 0 1 0 17.5v-15C0 1.125 1.125 0 2.5 0zm20 4.225V2.5h-20v1.725l10 5 10-5zm0 2.8l-9.438 4.713a1.25 1.25 0 0 1-1.124 0L2.5 7.025V17.5h20V7.025z"
                                       fill-rule="nonzero"/>

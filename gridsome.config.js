@@ -7,7 +7,7 @@
 module.exports = {
     siteName: 'Moorpark College Engineering Club',
     siteDescription: 'A simple portfolio theme for Gridsome powered by Tailwind CSS v1',
-    siteUrl: 'https://gridsome-portfolio-starter.netlify.com',
+    siteUrl: 'https://mcec.netlify.app',
     plugins: [
         {
             use: 'gridsome-plugin-tailwindcss',
@@ -68,13 +68,13 @@ module.exports = {
                 contentTypeName: 'Post',
                 feedOptions: {
                     title: 'Gridsome Portfolio Starter Blog',
-                    feed_url: 'https://gridsome-portfolio-starter.netlify.com/rss.xml',
-                    site_url: 'https://gridsome-portfolio-starter.netlify.com/'
+                    feed_url: 'https://mcec.netlify.app/rss.xml',
+                    site_url: 'https://mcec.netlify.app/'
                 },
                 feedItemOptions: node => ({
                     title: node.title,
                     description: node.summary,
-                    url: 'https://gridsome-portfolio-starter.netlify.com' + node.path,
+                    url: 'https://mcec.netlify.app' + node.path,
                     author: 'Moorpark College Engineering Club',
                     date: node.date
                 }),
