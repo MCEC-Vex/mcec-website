@@ -4,6 +4,7 @@
 import DefaultLayout from '~/layouts/Default.vue';
 import VueScrollTo from 'vue-scrollto';
 import VueFuse from 'vue-fuse';
+require('typeface-nunito-sans');
 
 export default function(Vue, {router, head, isClient})
 {
@@ -30,11 +31,6 @@ export default function(Vue, {router, head, isClient})
     head.meta.push({
         name: 'author',
         content: 'Moorpark College Engineering Club'
-    });
-    
-    head.link.push({
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700'
     });
 }
 
