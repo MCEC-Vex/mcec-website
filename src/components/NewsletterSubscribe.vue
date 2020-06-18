@@ -8,7 +8,7 @@
 
             <form action="#">
                 <div class="flex flex-col sm:flex-row">
-                    <input type="email" name="email" placeholder="Your email address"
+                    <input type="email" name="email" placeholder="Your email address" aria-label="email"
                            class="flex-1 bg-background-form rounded sm:rounded-r-none px-4 py-4 leading-normal border border-border-color-primary sm:border-r-0 shadow outline-none focus:border-green-700 z-10"
                            required>
                     <button data-element="submit"
