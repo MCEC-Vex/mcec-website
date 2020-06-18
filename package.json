@@ -1,5 +1,7 @@
 {
   "name": "mcec-website",
+  "license": "MIT",
+  "repository": "https://github.com/MCEC-Vex/mcec-website.git",
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
@@ -8,14 +10,9 @@
   "dependencies": {
     "@gridsome/plugin-sitemap": "^0.3.0",
     "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.6.0",
-    "@gridsome/vue-remark": "^0.2.1",
-    "axios": "^0.19.2",
     "gridsome": "^0.7.15",
-    "gridsome-plugin-remark-shiki": "^0.3.1",
     "gridsome-plugin-rss": "^1.2.0",
     "typeface-nunito-sans": "0.0.72",
-    "vue-fuse": "^2.2.1",
     "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {

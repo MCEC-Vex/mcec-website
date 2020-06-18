@@ -3,7 +3,6 @@
 
 import DefaultLayout from '~/layouts/Default.vue';
 import VueScrollTo from 'vue-scrollto';
-import VueFuse from 'vue-fuse';
 require('typeface-nunito-sans');
 
 export default function(Vue, {router, head, isClient})
@@ -15,8 +14,6 @@ export default function(Vue, {router, head, isClient})
         duration: 500,
         easing: 'ease'
     });
-    
-    Vue.use(VueFuse);
     
     head.meta.push({
         name: 'keywords',

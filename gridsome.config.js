@@ -38,31 +38,6 @@ module.exports = {
             }
         },
         {
-            use: '@gridsome/vue-remark',
-            options: {
-                typeName: 'Documentation', // Required
-                baseDir: './docs', // Where .md files are located
-                pathPrefix: '/docs', // Add route prefix. Optional
-                template: './src/templates/Documentation.vue', // Optional
-                plugins: [
-                    ['gridsome-plugin-remark-shiki', {theme: 'Material-Theme-Palenight', skipInline: true}]
-                ]
-            }
-        },
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                path: 'blog/**/*.md',
-                typeName: 'Post',
-                refs: {
-                    tags: {
-                        typeName: 'Tag',
-                        create: true
-                    }
-                }
-            }
-        },
-        {
             use: 'gridsome-plugin-rss',
             options: {
                 contentTypeName: 'Post',
@@ -92,16 +67,9 @@ module.exports = {
         }
     ],
     templates: {
-        Tag: '/tag/:id'
+    
     },
     transformers: {
-        remark: {
-            plugins: [
-                ['gridsome-plugin-remark-shiki', {theme: 'Material-Theme-Palenight', skipInline: true}]
-            ],
-            externalLinksTarget: '_blank',
-            externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-            anchorClassName: 'icon icon-link'
-        }
+    
     }
 };

@@ -4,12 +4,7 @@
         <header class="border-t-14 border-blue-800">
             <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
                 <div>
-                    <g-link v-if="theme === 'theme-light'" to="/">
-                        <g-image src="../../static/mcec-text.png" class="w-40" alt="logo"/>
-                    </g-link>
-                    <g-link v-else to="/">
-                        <g-image src="../../static/mcec-text.png" class="w-40" alt="logo"/>
-                    </g-link>
+                    <g-image src="../../static/mcec-text.png" class="w-40" alt="logo"/>
                 </div>
                 <div class="block lg:hidden">
                     <button @click="toggle"
@@ -23,9 +18,6 @@
                         class="uppercase tracking-wide font-bold w-full block flex-grow lg:space-x-8 space-y-6 lg:space-y-0 lg:flex lg:flex-initial lg:w-auto items-center mt-8 lg:mt-0"
                         :class="isOpen ? 'block': 'hidden'"
                 >
-                    <!--<li class="mb-6 lg:mb-0">
-                        <search-input/>
-                    </li>-->
                     <li>
                         <theme-switcher :theme="theme" @themeChanged="updateTheme"/>
                     </li>
@@ -132,12 +124,10 @@
 </static-query>
 
 <script>
-    import SearchInput from '../components/SearchInput';
     import ThemeSwitcher from '../components/ThemeSwitcher';
 
     export default {
         components: {
-            SearchInput,
             ThemeSwitcher
         },
         mounted()
