@@ -27,6 +27,11 @@ export default function(Vue, {router, head, isClient})
         name: 'author',
         content: 'Moorpark College Engineering Club'
     });
+    
+    head.meta.push({
+        rel: 'preconnect',
+        href: 'https://img.youtube.com/vi/Hxs0q9UoMDQ/hqdefault.jpg'
+    });
 }
 
 
