@@ -22,7 +22,8 @@ module.exports = {
                 primary: 'var(--bg-background-primary)',
                 secondary: 'var(--bg-background-secondary)',
                 tertiary: 'var(--bg-background-tertiary)',
-                
+                success: 'var(--bg-background-success)',
+                error: 'var(--bg-background-error)',
                 form: 'var(--bg-background-form)'
             },
             

@@ -4,11 +4,12 @@
             <h2 class="font-bold mb-6" id="contact">Contact Us:</h2>
 
             <div class="text-lg sm:text-lg mb-16">
-                <form name="contact" action="#" class="mb-12" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                <form v-if="!submitted" @submit.prevent="formSubmission" ref="form" name="contact" action="#"
+                      class="mb-12" method="post" data-netlify="true" netlify-honeypot="bot-field">
                     <div hidden aria-hidden="true">
                         <label>
                             Don’t fill this out if you're human
-                            <input name="bot-field" />
+                            <input name="bot-field"/>
                         </label>
                     </div>
                     <div class="flex flex-wrap mb-6 -mx-4">
@@ -48,6 +49,12 @@
                                class="block bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold tracking-wide uppercase shadow rounded cursor-pointer px-6 py-3">
                     </div>
                 </form>
+                <div v-if="submitted && !error" class="text-xl font-bold rounded px-4 py-4 bg-background-success text-copy-primary">
+                    Thanks for signing up!
+                </div>
+                <div v-if="error" class="text-xl font-bold rounded px-4 py-4 bg-background-error text-copy-primary mt-5">
+                    Error: {{error}}
+                </div>
             </div>
         </div>
     </div>
@@ -55,7 +62,36 @@
 
 <script>
     export default {
-        name: 'ContactUs'
+        name: 'ContactUs',
+        data: () => ({
+            submitted: false,
+            error: ''
+        }),
+        methods: {
+            formSubmission()
+            {
+                const data = new FormData(this.$refs.form);
+                data.append('form-name', 'contact');
+                fetch('/', {
+                    method: 'POST',
+                    body: data,
+                }).then(response =>
+                {
+                    if(response.ok)
+                    {
+                        this.submitted = true;
+                        this.error = '';
+                    }
+                    else
+                    {
+                        this.error = response.statusText;
+                    }
+                }).catch(error =>
+                {
+                    this.error = error;
+                });
+            }
+        }
     };
 </script>
 

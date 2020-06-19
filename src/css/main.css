@@ -15,26 +15,8 @@
     --text-copy-secondary: #4a5568;
 
     --border-border-color-primary: white;
-}
-
-.theme-light .search-highlighted {
-    background: #f0fff4;
-}
-
-.theme-light .search-hover:hover {
-    background: #f0fff4;
-}
-
-.theme-dark .markdown-body {
-    color: #24292e;
-}
-
-.theme-dark .search-highlighted {
-    background: #2d3748;
-}
-
-.theme-dark .search-hover:hover {
-    background: #2d3748;
+    --bg-background-success: #68d391;
+    --bg-background-error: #fc8181;
 }
 
 .theme-dark {
@@ -48,6 +30,8 @@
     --text-copy-secondary: #e2e8f0;
 
     --border-border-color-primary: #1a202c;
+    --bg-background-success: #2f855a;
+    --bg-background-error: #9b2c2c;
 }
 
 .theme-dark .markdown-body {

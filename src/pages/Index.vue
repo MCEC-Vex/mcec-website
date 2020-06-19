@@ -24,7 +24,7 @@
             <contact-us/>
         </div>
 
-        <div class="newsletter bg-background-tertiary">
+        <div class="bg-background-tertiary">
             <newsletter-subscribe/>
 
             <div class="container-inner mx-auto -mt-32 pb-4 overflow-x-hidden">

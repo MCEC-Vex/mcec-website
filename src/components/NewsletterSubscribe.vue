@@ -6,8 +6,19 @@
             <p class="mb-8 text-lg sm:text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Corporis, voluptatum. Quam, deleniti nulla.</p>
 
-            <form action="#" @submit.prevent="formSubmission" ref="form">
-                <div class="flex flex-col sm:flex-row">
+            <form action="#"
+                  @submit.prevent="formSubmission"
+                  ref="form"
+                  method="post"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field">
+                <div v-if="!submitted" class="flex flex-col sm:flex-row">
+                    <div hidden aria-hidden="true">
+                        <label>
+                            Don’t fill this out if you're human
+                            <input name="bot-field" />
+                        </label>
+                    </div>
                     <input type="email" name="email" placeholder="Your email address" aria-label="email"
                            class="flex-1 bg-background-form rounded sm:rounded-r-none px-4 py-4 leading-normal border border-border-color-primary sm:border-r-0 shadow outline-none focus:border-green-700 z-10"
                            required>
@@ -18,6 +29,12 @@
                         <span>Subscribe</span>
                     </button>
                 </div>
+                <div v-if="submitted && !error" class="text-xl font-bold rounded px-4 py-4 bg-background-success text-copy-primary">
+                    Thanks for signing up!
+                </div>
+                <div v-if="error" class="text-xl font-bold rounded px-4 py-4 bg-background-error text-copy-primary mt-5">
+                    Error: {{error}}
+                </div>
             </form>
         </div>
     </div>
@@ -26,6 +43,10 @@
 <script>
     export default {
         name: 'NewsletterSubscribe',
+        data: () => ({
+            submitted: false,
+            error: ''
+        }),
         methods: {
             formSubmission()
             {
@@ -34,12 +55,20 @@
                 fetch('/', {
                     method: 'POST',
                     body: data,
-                }).then(() =>
+                }).then(response =>
                 {
-                    this.$refs.form.innerHTML = `<div>Good to go</div>`;
+                    if(response.ok)
+                    {
+                        this.submitted = true;
+                        this.error = '';
+                    }
+                    else
+                    {
+                        this.error = response.statusText;
+                    }
                 }).catch(error =>
                 {
-                    this.$refs.form.innerHTML = `<div>Error: ${error}</div>`;
+                    this.error = error;
                 });
             }
         }
