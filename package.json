@@ -9,9 +9,9 @@
     "postinstall": "netlify-lambda install"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "gridsome": "^0.7.15",
     "netlify-lambda": "^1.6.3",
-    "node-fetch": "^2.6.0",
     "typeface-nunito-sans": "0.0.72",
     "vue-scrollto": "^2.18.1"
   },
