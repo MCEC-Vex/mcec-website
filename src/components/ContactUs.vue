@@ -4,8 +4,9 @@
             <h2 class="font-bold mb-6" id="contact">Contact Us:</h2>
 
             <div class="text-lg sm:text-lg mb-16">
-                <form v-if="!submitted" @submit.prevent="formSubmission" ref="form" name="contact-form" action="#"
-                      class="mb-12" method="post">
+                <form v-if="!submitted" @submit.prevent="formSubmission" ref="form" name="contact" action="#"
+                      class="mb-12" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact"/>
                     <div hidden aria-hidden="true">
                         <label>
                             Don’t fill this out if you're human
