@@ -8,6 +8,7 @@
 
             <form action="#"
                   @submit.prevent="formSubmission"
+                  name="newsletter"
                   ref="form"
                   method="post"
                   data-netlify="true"
