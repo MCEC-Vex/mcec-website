@@ -6,7 +6,7 @@
             <p class="mb-8 text-lg sm:text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Corporis, voluptatum. Quam, deleniti nulla.</p>
 
-            <form action="#">
+            <form action="#" @submit.prevent="formSubmission" ref="form">
                 <div class="flex flex-col sm:flex-row">
                     <input type="email" name="email" placeholder="Your email address" aria-label="email"
                            class="flex-1 bg-background-form rounded sm:rounded-r-none px-4 py-4 leading-normal border border-border-color-primary sm:border-r-0 shadow outline-none focus:border-green-700 z-10"
@@ -25,7 +25,24 @@
 
 <script>
     export default {
-        name: 'NewsletterSubscribe'
+        name: 'NewsletterSubscribe',
+        methods: {
+            formSubmission()
+            {
+                const data = new FormData(this.$refs.form);
+                data.append('form-name', 'newsletter');
+                fetch('/', {
+                    method: 'POST',
+                    body: data,
+                }).then(() =>
+                {
+                    this.$refs.form.innerHTML = `<div>Good to go</div>`;
+                }).catch(error =>
+                {
+                    this.$refs.form.innerHTML = `<div>Error: ${error}</div>`;
+                });
+            }
+        }
     };
 </script>
 

@@ -4,7 +4,13 @@
             <h2 class="font-bold mb-6" id="contact">Contact Us:</h2>
 
             <div class="text-lg sm:text-lg mb-16">
-                <form action="#" class="mb-12">
+                <form name="contact" action="#" class="mb-12" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                    <div hidden aria-hidden="true">
+                        <label>
+                            Don’t fill this out if you're human
+                            <input name="bot-field" />
+                        </label>
+                    </div>
                     <div class="flex flex-wrap mb-6 -mx-4">
                         <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
                             <label class="block mb-2 text-copy-primary" for="name">

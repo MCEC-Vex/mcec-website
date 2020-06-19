@@ -5,10 +5,12 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "postinstall": "netlify-lambda install"
   },
   "dependencies": {
     "gridsome": "^0.7.15",
+    "netlify-lambda": "^1.6.3",
     "typeface-nunito-sans": "0.0.72",
     "vue-scrollto": "^2.18.1"
   },
