@@ -1,4 +1,3 @@
-import {parse} from 'querystring';
 const axios = require('axios');
 
 // Based on https://dev.to/skatkov/jamstack-progressive-mailchimp-sign-up-form-with-netlify-13m3
@@ -7,18 +6,15 @@ const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
 
 exports.handler = async (event, context) =>
 {
-    let body;
     console.log(event);
-    try
+    
+    let payload = JSON.parse(event.body).payload;
+    if(payload['form_name'] !== 'newsletter')
     {
-        body = JSON.parse(event.body);
-    }
-    catch(e)
-    {
-        body = parse(event.body);
+        return;
     }
     
-    if(!body.email)
+    if(!payload.email)
     {
         console.log('missing email');
         return {
@@ -52,7 +48,7 @@ exports.handler = async (event, context) =>
     }
     
     const data = {
-        email_address: body.email,
+        email_address: payload.email,
         status: 'pending',
         merge_fields: {}
     };
