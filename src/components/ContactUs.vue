@@ -5,7 +5,7 @@
 
             <div class="text-lg sm:text-lg mb-16">
                 <form v-if="!submitted" @submit.prevent="formSubmission" ref="form" name="contact-form" action="#"
-                      class="mb-12" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                      class="mb-12" method="post">
                     <div hidden aria-hidden="true">
                         <label>
                             Don’t fill this out if you're human

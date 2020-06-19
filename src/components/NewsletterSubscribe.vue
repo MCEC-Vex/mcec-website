@@ -10,9 +10,7 @@
                   @submit.prevent="formSubmission"
                   name="newsletter"
                   ref="form"
-                  method="post"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field">
+                  method="post">
                 <div v-if="!submitted" class="flex flex-col sm:flex-row">
                     <div hidden aria-hidden="true">
                         <label>
