@@ -1,14 +1,14 @@
-const axios = require('axios');
+const fetch = require('node-fetch')
 
 // Based on https://dev.to/skatkov/jamstack-progressive-mailchimp-sign-up-form-with-netlify-13m3
-const mailChimpAPI = process.env.MAILCHIMP_API_KEY;
-const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
+// and https://css-tricks.com/using-netlify-forms-and-netlify-functions-to-build-an-email-sign-up-widget/
+const {MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID} = process.env;
 
-exports.handler = async (event, context) =>
+exports.handler = async event =>
 {
     console.log(event);
     
-    let payload = JSON.parse(event.body).payload;
+    const payload = JSON.parse(event.body).payload;
     if(payload['form_name'] !== 'newsletter')
     {
         return;
@@ -25,7 +25,7 @@ exports.handler = async (event, context) =>
         };
     }
     
-    if(!mailChimpAPI)
+    if(!MAILCHIMP_API_KEY)
     {
         console.log('missing mailChimpAPI key');
         return {
@@ -36,7 +36,7 @@ exports.handler = async (event, context) =>
         };
     }
     
-    if(!mailChimpListID)
+    if(!MAILCHIMP_LIST_ID)
     {
         console.log('missing mailChimpListID key');
         return {
@@ -56,59 +56,20 @@ exports.handler = async (event, context) =>
     const subscriber = JSON.stringify(data);
     console.log('Sending data to mailchimp', subscriber);
     
-    // Subscribe an email
-    
-    axios({
-        method: 'post',
-        url: `https://us14.api.mailchimp.com/3.0/lists/${mailChimpListID}/members/`,
-        data: subscriber,
-        auth: {
-            username: 'apikey',
-            password: mailChimpAPI
-        }
-    }).then(function(response)
+    return fetch(`https://us14.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members/`, {
+        method: 'POST',
+        headers: {
+            Authorization: 'Basic ' + Buffer.from('apikey:' + MAILCHIMP_API_KEY).toString('base64'),
+            'Content-Type': 'application/json',
+        },
+        body: subscriber
+    }).then(response => response.json()).then(data =>
     {
-        console.log(`status:${response.status}`);
-        console.log(`data:${response.data}`);
-        console.log(`headers:${response.headers}`);
-        
-        if(response.headers['content-type'] === 'application/x-www-form-urlencoded')
-        {
-            return {
-                statusCode: 302,
-                headers: {
-                    Location: '/thanks.html',
-                    'Cache-Control': 'no-cache'
-                },
-                body: JSON.stringify({})
-            };
-        }
-        
-        // Return data to AJAX request
-        return {
-            statusCode: 200,
-            body: JSON.stringify({emailAdded: true})
-        };
-    }).catch(function(error)
+        console.log(`Submitted! \n ${data}`)
+    }).catch(error =>
     {
-        if(error.response)
-        {
-            // The request was made and the server responded with a status code
-            // that falls out of the range of 2xx
-            console.log(error.response.data);
-            console.log(error.response.status);
-            console.log(error.response.headers);
-        }
-        else if(error.request)
-        {
-            // The request was made but no response was received
-            console.log(error.request);
-        }
-        else
-        {
-            // Something happened in setting up the request that triggered an Error
-            console.log('Error', error.message);
-        }
-        console.log(error.config);
+        console.log('Error!');
+        console.log(error);
+        return {statusCode: 422, body: String(error)}
     });
 };
