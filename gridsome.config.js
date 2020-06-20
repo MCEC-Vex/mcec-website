@@ -6,8 +6,8 @@
 
 module.exports = {
     siteName: 'Moorpark College Engineering Club',
-    siteDescription: 'A simple portfolio theme for Gridsome powered by Tailwind CSS v1',
-    siteUrl: 'https://mcec.netlify.app',
+    siteDescription: 'Moorpark College Engineering Club Official Website',
+    siteUrl: 'https://mcec.club',
     plugins: [
         {
             use: 'gridsome-plugin-tailwindcss',
