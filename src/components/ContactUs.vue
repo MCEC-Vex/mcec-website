@@ -51,7 +51,7 @@
                     </div>
                 </form>
                 <div v-if="submitted && !error" class="text-xl font-bold rounded px-4 py-4 bg-background-success text-copy-primary">
-                    Thanks for signing up!
+                    Thanks for contacting us!
                 </div>
                 <div v-if="error" class="text-xl font-bold rounded px-4 py-4 bg-background-error text-copy-primary mt-5">
                     Error: {{error}}
