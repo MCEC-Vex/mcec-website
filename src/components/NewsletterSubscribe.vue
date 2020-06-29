@@ -3,8 +3,9 @@
         <h2 class="text-2xl font-bold mb-8">Join our Newsletter</h2>
 
         <div class="w-4/5 mx-auto mb-8">
-            <p class="mb-8 text-lg sm:text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Corporis, voluptatum. Quam, deleniti nulla.</p>
+            <p class="mb-8 text-lg sm:text-xl">
+                If you're interested in signing up for our weekly newsletter, enter your email here!
+            </p>
 
             <form action="#"
                   @submit.prevent="formSubmission"

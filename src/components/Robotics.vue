@@ -3,7 +3,8 @@
         <h2 class="font-bold mb-6" id="robotics">Robotics</h2>
 
         <div class="flex flex-col sm:flex-row justify-between items-center mb-16">
-            <div class="flex-1 text-lg sm:text-xl ml-6">Lorem ipsum dolor sit amet consectetur, adipisicing
+            <div class="flex-1 text-lg sm:text-xl ml-6">
+                Lorem ipsum dolor sit amet consectetur, adipisicing
                 elit. Eum quae architecto minus molestias iusto ducimus fuga quo quia libero dignissimos, fugiat
                 modi assumenda debitis laboriosam.
             </div>

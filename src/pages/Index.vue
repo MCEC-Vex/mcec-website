@@ -8,7 +8,11 @@
 
         <div class="container-inner mx-auto mb-16">
             <p class="text-lg sm:text-xl mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus est, feugiat ac urna ac, lacinia faucibus ipsum. Nullam ante nulla, ornare in sem nec, consequat aliquam massa. Etiam purus turpis, ultrices eget tincidunt sed, venenatis nec lacus. Duis nec mattis sem. Ut vulputate ultrices efficitur. Maecenas elementum eros diam, et tempor enim consectetur et. In condimentum vehicula sem a mattis. Integer vel est ac velit auctor accumsan id et arcu. Fusce malesuada tempus sem a fringilla. Nunc finibus gravida ipsum, vitae finibus dolor pellentesque in.
+                Hey there! We are the Engineering Club at Moorpark College in California.
+                This website serves as a way to reach out to our club members and anyone interested in the engineering community here on campus!
+                We will keep you posted on the latest projects we are working on.
+                If you have any questions, don't hesitate to ask us in the contact section below.
+                We hope to see you at the next club meeting!
             </p>
         </div>
 
