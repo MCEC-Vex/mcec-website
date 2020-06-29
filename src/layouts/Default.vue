@@ -4,7 +4,7 @@
         <header class="border-t-14 border-blue-800">
             <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
                 <div>
-                    <g-image src="../../static/mcec-text.png" class="w-40" alt="logo"/>
+                    <g-image src="~/assets/mcec-text.png" class="w-40" alt="logo"/>
                 </div>
                 <div class="block lg:hidden">
                     <button @click="toggle"
