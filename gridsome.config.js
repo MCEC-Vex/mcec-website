@@ -8,6 +8,10 @@ module.exports = {
     siteName: 'Moorpark College Engineering Club',
     siteDescription: 'Moorpark College Engineering Club Official Website',
     siteUrl: 'https://mcec.club',
+    chainWebpack: config =>
+    {
+        config.resolve.alias.set('@leadership', '@/assets/leadership')
+    },
     plugins: [
         {
             use: 'gridsome-plugin-tailwindcss',
