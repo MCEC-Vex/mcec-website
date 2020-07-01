@@ -14,7 +14,6 @@
                         {{leader.bio}}
                     </div>
                 </div>
-
             </li>
         </ul>
     </div>
@@ -40,7 +39,7 @@
                 {
                     name: 'Jon Puno',
                     position: 'Treasurer',
-                    bio: 'I’m a second year at Moorpark College, and my major currently is biology. In the past, I’ve worked on multiple community projects such as budgeting and creating a garden for my high school, and assisting in recycling and food drives to help through social or environmental means. I joined the engineering club looking to broaden my perspective across multiple fields, and I think I’ve found it through this club. I was always interested in engineering topics and the work needed in creating things such as digital devices like arduino mirrors, or multi-purpose drones. Being a part of this club, and helping with VEX Robotics has added to me ideas that I could use for the possible future in the medical field. Besides engineering, I’m a person that enjoys relaxing with music and talking with people about anything or everything; feel free to ask me for help, for any questions, or to just sit and chat!',
+                    bio: 'Hey everyone! I’m a second year at Moorpark College, and I’m a Biology Major. I joined the club looking to broaden my perspective across multiple fields. I was always interested in engineering and helping with VEX Robotics has given me ideas for the future in medicine. Besides engineering, I enjoy relaxing and talking with people about anything; feel free to ask me for help, questions, or to just sit and chat!',
                     image: 'jon_puno.png'
                 }
             ]
@@ -49,13 +48,6 @@
 </script>
 
 <style scoped>
-    .checkmark
-    {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2229%22%20height%3D%2229%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M4.427%2024.93A14.5%2014.5%200%201%201%2024.93%204.427c5.495%205.69%205.416%2014.733-.177%2020.326s-14.637%205.672-20.326.177z%22%20fill%3D%22%232E855A%22/%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M10.234%2012.803l3.67%203.253L20.766%2010%2023%2012l-9.096%208L8%2014.789l2.234-2z%22/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        @apply pl-10;
-    }
-
     .leadership-image
     {
         height: 4rem;
