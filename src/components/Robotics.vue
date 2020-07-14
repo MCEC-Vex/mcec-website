@@ -4,9 +4,11 @@
 
         <div class="flex flex-col sm:flex-row justify-between items-center mb-16">
             <div class="flex-1 text-lg sm:text-xl ml-6">
-                Lorem ipsum dolor sit amet consectetur, adipisicing
-                elit. Eum quae architecto minus molestias iusto ducimus fuga quo quia libero dignissimos, fugiat
-                modi assumenda debitis laboriosam.
+                The VEX Robotics Competition is a game-based Engineering Challenge in which students are given a task to
+                design and build a robot to yearly specifications and compete against other teams. This competition is a
+                great way for students to combine a passion for robotics and a competition in order to learn valuable
+                engineering skills. In addition, students also learn irreplaceable soft skills such as teamwork,
+                communication, leadership and much more!
             </div>
         </div>
 
