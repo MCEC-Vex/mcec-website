@@ -5,6 +5,7 @@
             <li v-for="leader of leadership" :key="leader.name" class="flex">
                 <g-image
                         v-if="leader.image"
+                        :alt="leader.name"
                         class="leadership-image inline-block rounded-full text-white shadow-solid mr-4 mt-2"
                         :src="require(`!!assets-loader!@leadership/${leader.image}`)"
                 />
